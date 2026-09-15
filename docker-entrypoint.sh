@@ -5,7 +5,7 @@ set -e
 cd /var/www/html
 
 php artisan config:clear
-php artisan migrate --force
+php artisan migrate:fresh --force
 php artisan db:seed --class=ProductSeeder --force
 
 php artisan optimize:clear
