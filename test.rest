@@ -1,0 +1,22 @@
+@url=http://localhost:8000/api/v1
+
+###
+POST {{url}}/checkout
+Accept: application/json
+Content-Type: application/json
+
+{
+    "customer_name": "John Doe",
+    "customer_email": "john@example.com",
+    "customer_phone": "08012345678",
+    "products": [
+        {
+            "id": "01a09d60-b974-718d-a0a5-eedafa398598",
+            "quantity": 2
+        },
+        {
+            "id": "01a09d60-b974-718d-a0a5-eedafa398598",
+            "quantity": 1
+        }
+    ]
+}
