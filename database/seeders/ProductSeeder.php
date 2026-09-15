@@ -52,7 +52,9 @@ class ProductSeeder extends Seeder
         ];
 
         foreach ($products as $product) {
-            Product::create([
+            Product::updateOrCreate([
+                'slug' => \Illuminate\Support\Str::slug($product['name']),
+            ],[
                 ...$product,
                 'slug' => \Illuminate\Support\Str::slug($product['name']),
                 'type' => 'digital',
