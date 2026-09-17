@@ -21,6 +21,7 @@ function PaymentSuccessPage() {
 
   useEffect(() => {
     if (!reference || hasVerified.current) {
+      setStatus("failed");
       return;
     }
 
